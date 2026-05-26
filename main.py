@@ -69,4 +69,4 @@ def math_trainer():
 if __name__ == "__main__":
     math_trainer()
 
-print("Всего хорошего!")
+print("Всего хорошего!!!")
