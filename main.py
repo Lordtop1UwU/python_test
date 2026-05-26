@@ -17,8 +17,8 @@ def math_trainer():
         num2 = random.randint(1, 10)
         correct_answer = num1 * num2
 
-
-
+        # Фиксируем значение времени в момент начала тренировки
+        start_time = time.time()
 
         # Вывод примера на экран игрока
         player_input = input(f"{num1} × {num2} = ")
@@ -27,5 +27,8 @@ def math_trainer():
         if player_input.lower() == 'q':
             break
 
-
+        # Потраченое время
+        end_time = time.time()
+        response_time = end_time - start_time
+        response_times.append(response_time)
 
