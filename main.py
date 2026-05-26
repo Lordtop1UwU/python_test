@@ -44,23 +44,21 @@ def math_trainer():
             else:
                 print(f"Неверно. Правильный ответ: {correct_answer}")
         except ValueError:
-            print("Пожалуйста, введите число или 'q' для выхода")
+            print("Введите число или 'q' для выхода")
             continue
 
         print(f"Время ответа: {response_time:.2f} сек")
         print("-" * 20)
 
     # Вывод итоговой статистики
-
-        accuracy = (correct_answers / total_questions) * 100
-        average_time = sum(response_times) / len(response_times)
-
+    if total_questions > 0:
         print("=" * 40)
         print("ИТОГИ ТРЕНИРОВКИ:")
         print(f"Всего примеров: {total_questions}")
         print(f"Правильных ответов: {correct_answers}")
         print(f"Ошибок: {total_questions - correct_answers}")
-
+    else:
+        print("Вы не решили ни одного примера.")
 
 # Запуск программы
 if __name__ == "__main__":
