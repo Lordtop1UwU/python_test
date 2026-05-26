@@ -68,3 +68,5 @@ def math_trainer():
 # Запуск программы
 if __name__ == "__main__":
     math_trainer()
+
+print("Всего хорошего!")
