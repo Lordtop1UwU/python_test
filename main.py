@@ -32,3 +32,24 @@ def math_trainer():
         response_time = end_time - start_time
         response_times.append(response_time)
 
+        # Прверка ответа
+        try:
+            player_answer = int(player_input)
+            total_questions += 1
+
+            # Проверка правильности ответа
+            if player_answer == correct_answer:
+                print("Да ты клянись, парвильно!")
+                correct_answers += 1
+            else:
+                print(f"Учи таблицу. Правильный ответ: {correct_answer}")
+        except ValueError:
+            print("Ты буквы от цифр не отличаешь?. Введи число или 'q' для выхода")
+            continue
+
+        print(f"Время ответа: {response_time:.2f} сек")
+        print("-" * 20)
+
+# Запуск программы
+if __name__ == "__main__":
+    math_trainer()
