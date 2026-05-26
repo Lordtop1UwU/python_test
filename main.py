@@ -52,11 +52,16 @@ def math_trainer():
 
     # Вывод итоговой статистики
     if total_questions > 0:
+        avg_time=sum(response_times)/total_questions
+        accuracy=(correct_answers/total_questions)*100
+
         print("=" * 40)
         print("ИТОГИ ТРЕНИРОВКИ:")
         print(f"Всего примеров: {total_questions}")
         print(f"Правильных ответов: {correct_answers}")
         print(f"Ошибок: {total_questions - correct_answers}")
+        print(f"Аккуратность:{accuracy:.1f} %")
+        print(f"Среднее время:{avg_time:.2f} сек")
     else:
         print("Вы не решили ни одного примера.")
 
